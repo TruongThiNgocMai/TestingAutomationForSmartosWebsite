@@ -23,3 +23,14 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite("visit", (originalFn, url, options) => { ... })
+
+//Customize command
+const url = 'https://csm-global-admin-web-staging.enouvo.com/'
+
+Cypress.Commands.add('LoginFunction', (email, password) => {
+    cy.visit(url);
+    cy.get('#email').click().type(email);  
+    cy.get('#password').click().type(password);
+    cy.get('.login-form-button').click();
+    cy.wait(3000);
+})
