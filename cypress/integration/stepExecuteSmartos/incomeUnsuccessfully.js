@@ -4,11 +4,11 @@ import { Given } from "cypress-cucumber-preprocessor/steps"
 
 //=====================INCOME UNSUCCESSFULLY WITH DO NOT INPUT DATA FOR ALL OF REQUIRED FIELDS======================
 Given(/^I login successfully to Smartos Page$/, function () {
-  cy.LoginFunction('admin@enouvo.com', 'enouvo123')
+    cy.LoginFunction('admin@enouvo.com', 'enouvo123')
 });
 
 When(/^I click on Income button$/, function () {
-  cy.get('.rightHeader > :nth-child(1)').click()
+    cy.get('.rightHeader > :nth-child(1)').click()
 });
 
 And(/^I click on Create button in income form$/, function () {
@@ -34,7 +34,7 @@ Then(/^I verify notice message display below Fee$/, function () {
 Given(/^I login successfully to Smartos Page$/, function () {
     cy.LoginFunction('admin@enouvo.com', 'enouvo123')
 });
-  
+
 When(/^I click on Income button$/, function () {
     cy.get('.rightHeader > :nth-child(1)').click()
 });
@@ -71,7 +71,7 @@ Then(/^I verify notice message display below Email$/, function () {
 Given(/^I login successfully to Smartos Page$/, function () {
     cy.LoginFunction('admin@enouvo.com', 'enouvo123')
 });
-  
+
 When(/^I click on Income button$/, function () {
     cy.get('.rightHeader > :nth-child(1)').click()
 });

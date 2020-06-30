@@ -40,7 +40,7 @@ Given(/^I login successfully to Smartos Page$/, function () {
 });
 
 When(/^I click on Booking button$/, function () {
-    cy.get('.rightHeader > :nth-child(3)').click()
+  cy.get('.rightHeader > :nth-child(3)').click()
 });
 
 And(/^I input customer name as (.+)$/, function (customername) {
@@ -55,7 +55,7 @@ And(/^I choose valid data for Gender$/, function () {
   cy.get('input[value=Male]').should('be.visible').should('not.be.checked')
   cy.get('input[value=Female]').should('be.visible').should('not.be.checked').click()
   cy.get('input[value=Other]').should('be.visible').should('not.be.checked')
-  });
+});
 
 And(/^I choose valid data for service$/, function () {
   cy.get('.ant-cascader-picker-label').should('be.visible').click()
@@ -117,8 +117,8 @@ Given(/^I login successfully to Smartos Page$/, function () {
 });
 
 When(/^I click on Booking button$/, function () {
-    cy.get('.rightHeader > :nth-child(3)').click()
-  });
+  cy.get('.rightHeader > :nth-child(3)').click()
+});
 
 And(/^I input customer name as (.+)$/, function (customername) {
   cy.xpath('//*[@id="customerName"]/div/div/ul/li/div/input').click().type(customername)
@@ -132,7 +132,7 @@ And(/^I choose valid data for Gender$/, function () {
   cy.get('input[value=Male]').should('be.visible').should('not.be.checked')
   cy.get('input[value=Female]').should('be.visible').should('not.be.checked').click()
   cy.get('input[value=Other]').should('be.visible').should('not.be.checked')
-  });
+});
 
 And(/^I choose valid data for Service$/, function () {
   cy.get('.ant-cascader-picker-label').should('be.visible').click()
@@ -192,7 +192,7 @@ And(/^I click on Create button in booking form$/, function () {
 });
 
 And(/^I go to History Page$/, function () {
-  cy.get('[title="History"]').click({force: true})
+  cy.get('[title="History"]').click({ force: true })
 });
 
 Then(/^I verify Booking form is open$/, function () {
@@ -203,7 +203,7 @@ Then(/^I verify Booking form is open$/, function () {
 
 Then(/^I verify booking successfully with notice message below paid$/, function () {
   cy.get('.ant-form-explain').should('have.text', 'This field is required Price must be smaller than or equal Est. Fee')
-  })
+})
 
 ////=====================BOOKING UNSUCCESSFULLY WHEN USER INPUT INCCRECT FORMAT FOR EMAIL======================
 Given(/^I login successfully to Smartos Page$/, function () {
@@ -211,8 +211,8 @@ Given(/^I login successfully to Smartos Page$/, function () {
 });
 
 When(/^I click on Booking button$/, function () {
-    cy.get('.rightHeader > :nth-child(3)').click()
-  });
+  cy.get('.rightHeader > :nth-child(3)').click()
+});
 
 And(/^I input customer name as (.+)$/, function (customername) {
   cy.xpath('//*[@id="customerName"]/div/div/ul/li/div/input').click().type(customername)
@@ -226,7 +226,7 @@ And(/^I choose valid data for Gender$/, function () {
   cy.get('input[value=Male]').should('be.visible').should('not.be.checked')
   cy.get('input[value=Female]').should('be.visible').should('not.be.checked').click()
   cy.get('input[value=Other]').should('be.visible').should('not.be.checked')
-  });
+});
 
 And(/^I choose valid data for Service$/, function () {
   cy.get('.ant-cascader-picker-label').should('be.visible').click()
@@ -270,7 +270,7 @@ And(/^I click on Create button in booking form$/, function () {
 });
 
 And(/^I go to History Page$/, function () {
-  cy.get('[title="History"]').click({force: true})
+  cy.get('[title="History"]').click({ force: true })
 });
 
 Then(/^I verify Booking form is open$/, function () {
@@ -281,7 +281,7 @@ Then(/^I verify Booking form is open$/, function () {
 
 Then(/^I verify booking successfully with notice message below email with incorrect formart$/, function () {
   cy.get(':nth-child(2) > .ant-row > .ant-form-item-control-wrapper > .ant-form-item-control > .ant-form-explain').should('have.text', 'The input is not valid E-mail!')
-  })
+})
 
 //=====================CREATE BOOKING SERVICE UNSUCCESSFULLY WITH USING OLD EMAIL TO BOOKING======================
 Given(/^I login successfully to Smartos Page$/, function () {
@@ -289,7 +289,7 @@ Given(/^I login successfully to Smartos Page$/, function () {
 });
 
 When(/^I click on Booking button$/, function () {
-    cy.get('.rightHeader > :nth-child(3)').click()  
+  cy.get('.rightHeader > :nth-child(3)').click()
 });
 
 And(/^I input customer name as (.+)$/, function (customername) {
@@ -304,7 +304,7 @@ And(/^I choose valid data for Gender$/, function () {
   cy.get('input[value=Male]').should('be.visible').should('not.be.checked')
   cy.get('input[value=Female]').should('be.visible').should('not.be.checked').click()
   cy.get('input[value=Other]').should('be.visible').should('not.be.checked')
-  });
+});
 
 And(/^I choose valid data for service$/, function () {
   cy.get('.ant-cascader-picker-label').should('be.visible').click()
@@ -350,7 +350,7 @@ And(/^I click on Create button in booking form$/, function () {
 });
 
 And(/^I go to History Page$/, function () {
-  cy.get('[title="History"]').click({force: true})
+  cy.get('[title="History"]').click({ force: true })
 });
 
 Then(/^I verify Booking form is open$/, function () {

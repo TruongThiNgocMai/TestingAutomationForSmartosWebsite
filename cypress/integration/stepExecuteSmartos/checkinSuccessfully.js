@@ -10,13 +10,13 @@ Given(/^I login successfully to Smartos Page$/, function () {
 
 When(/^I choose the information of customer to checkin are (.+), (.+), (.+), (.+), (.+)$/, function (bookingid, customername, services, room, packagetype) {
     cy.xpath('/html/body/div[1]/div/div/div[1]/section/section/main/div/div/div[3]/div/div[3]/div/div/div/div/div/div/div[1]/div[2]/table/tbody/tr[1]')
-      .within(function() {  
-        cy.get('td').eq(0).should('contain.text', bookingid)
-        cy.get('td').eq(1).should('contain.text', customername)
-        cy.get('td').eq(2).should('contain.text', services)
-        cy.get('td').eq(3).should('contain.text', room)
-        cy.get('td').eq(4).should('contain.text', packagetype)
-    })
+        .within(function () {
+            cy.get('td').eq(0).should('contain.text', bookingid)
+            cy.get('td').eq(1).should('contain.text', customername)
+            cy.get('td').eq(2).should('contain.text', services)
+            cy.get('td').eq(3).should('contain.text', room)
+            cy.get('td').eq(4).should('contain.text', packagetype)
+        })
 })
 
 And(/^I click on checkin icon in the table$/, function () {
@@ -42,12 +42,12 @@ Then(/^I verify I stay at Dashboard Page$/, function () {
 Then(/^I verify I checkin successfully with (.+), (.+), (.+), (.+), (.+)$/, function (bookingid, customername, services, room, packagetype) {
     const checkinTime = Cypress.moment().format("HH:MMA" + " now")
     cy.xpath('//*[@id="status"]/div/div[3]/div/div[3]/div/div/div/div/div/div/div[1]/div[2]/table/tbody/tr[1]')
-      .within(function() {
-        cy.get('td').eq(0).should('contain.text', bookingid)
-        cy.get('td').eq(1).should('contain.text', customername)
-        cy.get('td').eq(2).should('contain.text', services)
-        cy.get('td').eq(3).should('contain.text', room)
-        cy.get('td').eq(4).should('contain.text', packagetype)
-        cy.get('td').eq(8).scrollIntoView().should('be.visible').should('contain.text', checkinTime)
-    })
+        .within(function () {
+            cy.get('td').eq(0).should('contain.text', bookingid)
+            cy.get('td').eq(1).should('contain.text', customername)
+            cy.get('td').eq(2).should('contain.text', services)
+            cy.get('td').eq(3).should('contain.text', room)
+            cy.get('td').eq(4).should('contain.text', packagetype)
+            cy.get('td').eq(8).scrollIntoView().should('be.visible').should('contain.text', checkinTime)
+        })
 })

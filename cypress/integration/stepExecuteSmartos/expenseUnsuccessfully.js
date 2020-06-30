@@ -4,7 +4,7 @@ import { Given } from "cypress-cucumber-preprocessor/steps"
 
 //=====================EXPENSE UNSUCCESSFULLY WITH DO NOT INPUT DATA FOR ALL OF REQUIRED FIELDS======================
 Given(/^I login successfully to Smartos Page$/, function () {
-  cy.LoginFunction('admin@enouvo.com', 'enouvo123')
+    cy.LoginFunction('admin@enouvo.com', 'enouvo123')
 });
 
 When(/^I click on Expense button$/, function () {
@@ -34,7 +34,7 @@ Then(/^I verify notice message display below Fee$/, function () {
 Given(/^I login successfully to Smartos Page$/, function () {
     cy.LoginFunction('admin@enouvo.com', 'enouvo123')
 });
-  
+
 When(/^I click on Expense button$/, function () {
     cy.get('.rightHeader > :nth-child(2)').click()
 });
@@ -71,7 +71,7 @@ Then(/^I verify notice message display below Email in expense$/, function () {
 Given(/^I login successfully to Smartos Page$/, function () {
     cy.LoginFunction('admin@enouvo.com', 'enouvo123')
 });
-  
+
 When(/^I click on Expense button$/, function () {
     cy.get('.rightHeader > :nth-child(2)').click()
 });

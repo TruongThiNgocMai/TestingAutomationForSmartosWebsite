@@ -29,8 +29,8 @@ And(/^I choose data for Transaction Type in Expense$/, function () {
 });
 
 And(/^I choose data for Booking ID$/, function () {
- cy.xpath("//input[@class='ant-input ant-select-search__field']").click()
- cy.xpath("//li[contains(text(),'BK-0620-BAFB')]").click()
+    cy.xpath("//input[@class='ant-input ant-select-search__field']").click()
+    cy.xpath("//li[contains(text(),'BK-0620-BAFB')]").click()
 });
 
 And(/^I input fee for expense (.+)$/, function (fee) {
@@ -38,7 +38,7 @@ And(/^I input fee for expense (.+)$/, function (fee) {
 });
 
 And(/^I choose data for Payment Type$/, function () {
- cy.xpath("//div[contains(text(),'Payment By Cash')]").click()
+    cy.xpath("//div[contains(text(),'Payment By Cash')]").click()
 });
 
 And(/^I input note for expense (.+)$/, function (note) {
@@ -63,10 +63,10 @@ Then(/^I go to Transaction Page$/, function () {
 Then(/^I verify user create Expense successfully with (.+), (.+)$/, function (customername, fee) {
     const timeExpense = Cypress.moment().format("DD MMM YYYY, HH:mm")
     cy.xpath('/html/body/div[1]/div/div/div[1]/section/section/main/div/div/div/div[2]/div[2]/div[2]/div/div/div/div/div/div[1]/div[2]/table/tbody/tr[1]')
-    .within(function() {
-      cy.get('td').eq(0).should('be.visible').should('have.text', 'Expense')
-      cy.get('td').eq(2).should('be.visible').should('contain.text', customername)
-      cy.get('td').eq(6).scrollIntoView().should('be.visible').should('contain.text', fee)
-      cy.get('td').eq(8).scrollIntoView().should('be.visible').should('contain.text', timeExpense)
-    })
+        .within(function () {
+            cy.get('td').eq(0).should('be.visible').should('have.text', 'Expense')
+            cy.get('td').eq(2).should('be.visible').should('contain.text', customername)
+            cy.get('td').eq(6).scrollIntoView().should('be.visible').should('contain.text', fee)
+            cy.get('td').eq(8).scrollIntoView().should('be.visible').should('contain.text', timeExpense)
+        })
 });

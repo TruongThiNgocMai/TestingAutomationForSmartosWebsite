@@ -4,7 +4,7 @@ import { Given } from "cypress-cucumber-preprocessor/steps"
 
 //=====================SEARCH INFORMATION SUCCESSFULLY VIA CHOOSE SERVICES======================
 Given(/^I login successfully to Smartos Page$/, function () {
-  cy.LoginFunction('admin@enouvo.com', 'enouvo123')
+    cy.LoginFunction('admin@enouvo.com', 'enouvo123')
 });
 
 When(/^I choose Services have booking before (.+)$/, function (servicebookingbefore) {
@@ -20,20 +20,8 @@ Then(/^I verify I stay at Dashboard Page$/, function () {
     // cy.get(':nth-child(4) > a > .sc-jtRfpW').should('be.visible')
 });
 
-Then(/^I verify user search information via Services successfully with (.+)$/, function (servicebookingbefore) {   
-    let values = []
-    cy.xpath('/html/body/div[1]/div/div/div[1]/section/section/main/div/div/div[3]/div/div[3]/div/div/div/div/div/div/div[1]/div[2]/table/tbody')
-    .find('tr').find('td').eq(2)
-    .each(($el) => {
-        cy.wrap($el)
-        .invoke('text')
-        .then(text => {
-            values.push(text.trim())
-            })
-        })
-        .then(() => expect(values).to.deep.eq([servicebookingbefore]))
-    cy.xpath('/html/body/div[1]/div/div/div[1]/section/section/main/div/div/div[3]/div/div[3]/div/div/div/div/div/div/div[1]/div[2]/table/tbody').should('have.length', 3)
-// cy.get('td').eq(2).should('contain.text', servicebookingbefore)
+Then(/^I verify user search information via Services successfully with (.+)$/, function (servicebookingbefore) {
+   
 });
 
 Then(/^I verify user search information is empty$/, function () {
